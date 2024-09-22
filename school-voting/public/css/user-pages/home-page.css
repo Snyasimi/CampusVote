@@ -1,0 +1,122 @@
+body{
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#595f54;
+}
+
+
+
+h2,h3{
+    padding:.5rem;
+   
+}
+main{
+    display:grid;
+    grid-template-columns: 2fr 7fr;
+    gap:1rem;
+    
+}
+table{
+    min-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #595f54;
+    text-align: center;
+}
+
+tr{
+    line-height: 3rem;
+    
+}
+
+tr:nth-of-type(odd){
+    background-color: #9fa192;
+    color: white;
+}
+.thead{
+    
+    color: white;
+    font-weight: bold;
+    background-color: #595f54;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.student-details> h3{
+    color: whitesmoke;
+    background-color: #595f54;
+    border-top-left-radius: 1rem;
+    border-top-right-radius:1rem ;
+}
+.side-nav{
+    display:flex;
+    flex-flow:column wrap;
+    min-height: 100vh;
+    border-top-right-radius:1rem ;
+    color: black;
+    box-shadow: inset 2px 2px 5px #d2d3d2;
+    border: 1px solid #595f54;
+    padding: .5rem;
+
+}
+
+.side-nav > h2{
+    text-align: center;
+    color: #595f54;
+    
+}
+
+.side-nav > ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap:.5rem;
+    list-style: none;
+    padding:0;
+    flex:1;
+    a {
+        text-align: center;
+        display: block;
+        line-height:3rem;
+        color:  #595f54;
+        text-decoration:none;
+        border-top:1px solid  #595f54;
+        border-bottom:1px solid  #595f54;
+        border-radius:.3rem;
+        box-shadow: inset 2px 2px 15px 2px #d2d3d2;
+    }
+
+    
+
+    a:hover{
+        color: white;
+        background-color:#595f54;
+        
+    }
+} 
+
+.student-details{
+    padding: .5rem;
+    color: #595f54;
+}
+.student-details > *{
+
+    display: flex;
+    gap:.5rem;
+
+}
+.table-container{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:.5rem;
+    box-shadow: inset 2px 2px 5px #d2d3d2;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-top: 1px solid #595f54;
+}
+
+.main-area{
+    box-shadow: inset 2px 2px 5px #d2d3d2;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+
+    border: 1px solid #595f54;
+  
+}

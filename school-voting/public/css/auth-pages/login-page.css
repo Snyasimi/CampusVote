@@ -1,0 +1,106 @@
+
+
+body{
+    display:grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    gap:.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#595f54;
+    font-size: 1em;
+   
+}
+main{
+    display: flex;
+    min-height: 100vh;
+    box-shadow: inset 2px 2px 5px 3px#d2d3d2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: 1px solid #595f54;
+    gap:.5rem;
+}
+
+body > *{
+    
+}
+
+header{
+    padding-left: 1rem;
+    color:#595f54;
+    background-color: ;
+    box-shadow: inset 2px 2px 5px 3px#d2d3d2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.login-form{
+
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+    min-width: 100%;
+    
+}
+
+
+label{
+    text-align: left;
+    display: block;
+    padding:.5rem;
+}
+form{
+    padding: 1em;
+    background-cvolor:#595f54 ;
+    border-radius: 1em;;
+    margin:auto;
+    color:#595f54 ;
+    border: 1px solid #595f54;
+    min-width: 30%;
+    box-shadow: inset 2px 2px 5px 3px#d2d3d2;
+    display: flex;
+    flex-flow: column wrap;
+    gap: .5rem;
+
+}
+form  > *{
+    padding:.5em;
+}
+
+ h2{
+    text-align: left;
+    backgroudnd-color: ;
+    color: #595f54;
+    
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    
+    
+}
+
+input{
+    display: block;
+    padding:0;
+    border: 1px solid black;
+    min-width: 100%;
+    border: none;
+    box-shadow: inset 2px 2px 5px 2px #d2d3d2;
+    line-height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+button{
+    display: block;
+    min-width: 100%;
+    border-radius: .5em;
+    line-height: 3rem;
+    background-color: white;
+    border: 1px solid #595f54;
+    box-shadow: inset 2px 2px 15px 2px #d2d3d2;
+    
+    color: #595f54;
+}
+button:hover{
+    background-color: #595f54;
+    color: white;
+}

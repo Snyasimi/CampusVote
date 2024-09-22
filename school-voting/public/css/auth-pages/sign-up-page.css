@@ -1,0 +1,120 @@
+main{
+
+    padding: 1rem;
+    min-height: 100vh;
+    box-shadow: inset 2px 2px 5px 3px#d2d3d2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: 1px solid #595f54;
+    display: flex;
+}
+main > *{
+    flex: 1;
+}
+header{
+    padding-left: 1rem;
+    color:#595f54;
+    background-color: ;
+    box-shadow: inset 2px 2px 5px 3px#d2d3d2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    
+}
+h1{
+    text-align: left;
+    backgroudnd-color: ;
+    color: #595f54;
+    padding: 2rem;
+    border-top-right-radius: 1rem;
+    
+
+    
+}
+h2{
+    box-shadow: inset 2px 2px 20px 2px #d2d3d2;
+
+}
+
+.form-container{
+    display: flex;
+    padding: 1rem;
+    margin: auto;
+    
+
+}
+.names{
+    display: flex;
+    flex-flow: row;
+    min-width: 100%;
+    gap:.5rem;
+    padding: .5rem;
+ 
+}
+
+.names > *{
+    flex:1;
+    
+}
+
+form{
+    
+
+    padding: 2rem;
+    background-cvolor:#595f54 ;
+    border-radius: 1em;;
+   margin: auto;
+    color:#595f54 ;
+    border: 1px solid #595f54;
+    min-width: 80%;
+    box-shadow: inset 2px 2px 5px 3px#d2d3d2;
+    display: flex;
+    flex-flow: column wrap;
+    gap: .5rem;
+    
+}
+
+form > *{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+form  > *{
+    padding:.5em;
+}
+
+label{
+    text-align: left;
+    display: block;
+    
+    
+}
+
+input{
+    display: block;
+    min-width: 100%;
+    padding:0;
+    border: 1px solid black;
+    min-width: 100%;
+    border: none;
+    box-shadow: inset 2px 2px 5px 2px #d2d3d2;
+    line-height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+button{
+    display: block;
+    min-width: 100%;
+    border-radius: .5em;
+    line-height: 3rem;
+    background-color: white;
+    border: 1px solid #595f54;
+    box-shadow: inset 2px 2px 15px 2px #d2d3d2;
+    
+    color: #595f54;
+}
+button:hover{
+    background-color: #595f54;
+    color: white;
+}
