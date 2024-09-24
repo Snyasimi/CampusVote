@@ -24,20 +24,44 @@ body > *{
 }
 
 header{
+    display: flex;
     padding-left: 1rem;
     color:#595f54;
     background-color: ;
     box-shadow: inset 2px 2px 5px 3px#d2d3d2;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    border: 1px solid #595f54;
+    padding-bottom: .5rem;
+
+    a {
+        margin-left: auto;
+        margin-right:.5rem;
+        text-align: center;
+        display: block;
+        min-width:10%;
+        align-self:flex-end;
+        line-height:3rem;
+        color:  #595f54;
+        text-decoration:none;
+        border-top:1px solid  #595f54;
+        border-bottom:1px solid  #595f54;
+        border-radius:.3rem;
+        box-shadow: inset 2px 2px 15px 2px #d2d3d2;
+    }
+
+    
+
+    a:hover{
+        color: white;
+        background-color:#595f54;
+        
+    }
 }
 
 .login-form{
 
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    
     min-width: 100%;
     
 }
@@ -48,11 +72,12 @@ label{
     display: block;
     padding:.5rem;
 }
+
 form{
-    padding: 1em;
+    padding: 2rem;
     background-cvolor:#595f54 ;
     border-radius: 1em;;
-    margin:auto;
+   margin: auto;
     color:#595f54 ;
     border: 1px solid #595f54;
     min-width: 30%;
@@ -68,9 +93,8 @@ form  > *{
 
  h2{
     text-align: left;
-    backgroudnd-color: ;
-    color: #595f54;
     
+    color: #595f54;   
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     
@@ -87,6 +111,9 @@ input{
     line-height: 3rem;
     font-size: 1rem;
     text-align: center;
+    border: 1px solid #595f54;
+    
+    border-radius: .5rem;
 }
 
 button{
@@ -96,7 +123,7 @@ button{
     line-height: 3rem;
     background-color: white;
     border: 1px solid #595f54;
-    box-shadow: inset 2px 2px 15px 2px #d2d3d2;
+    box-shadow: inset 2px 2px 15px 10px #d2d3d2;
     
     color: #595f54;
 }

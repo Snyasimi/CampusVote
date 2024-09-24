@@ -9,6 +9,9 @@
 <body>
     <header>
         <h1>Mku e-polling</h1>
+
+        <a href="login">Login</a>
+
     </header>
 
     <main>

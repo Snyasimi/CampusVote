@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/', function () {
+    return view('user-view.home-page');
+});
+
 Route::get('/diddy', function () {
     return view('auth-view.login');
 });

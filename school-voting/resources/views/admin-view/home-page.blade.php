@@ -71,6 +71,7 @@
             <div>
                 <h2>Top 3 Candidates</h2>
 
+            </div>
             <div class="top-results">
                 <!-- Chairperson -->
                 

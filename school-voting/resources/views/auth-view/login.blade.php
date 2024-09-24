@@ -11,6 +11,7 @@
     <header>
         <h1>Mku e-polling</h1>
         <!-- Add navigation or logo here -->
+        <a href="login">Sign up</a>
     </header>
 
     <main>

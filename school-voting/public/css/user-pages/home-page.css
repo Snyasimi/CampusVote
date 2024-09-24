@@ -116,7 +116,8 @@ tr:nth-of-type(odd){
     box-shadow: inset 2px 2px 5px #d2d3d2;
     padding: 1rem;
     border-top-left-radius: 1rem;
-
+    background-color:blue;
+    color:white;
     border: 1px solid #595f54;
   
 }
