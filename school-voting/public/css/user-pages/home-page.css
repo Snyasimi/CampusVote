@@ -21,6 +21,7 @@ table{
     border-collapse: collapse;
     border: 1px solid #595f54;
     text-align: center;
+    color:black;
 }
 
 tr{
@@ -36,13 +37,13 @@ tr:nth-of-type(odd){
     
     color: white;
     font-weight: bold;
-    background-color: #595f54;
+    background-color: #9fa192;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
 .student-details> h3{
     color: whitesmoke;
-    background-color: #595f54;
+    background-color: #9fa192;
     border-top-left-radius: 1rem;
     border-top-right-radius:1rem ;
 }
@@ -52,15 +53,15 @@ tr:nth-of-type(odd){
     min-height: 100vh;
     border-top-right-radius:1rem ;
     color: black;
-    box-shadow: inset 2px 2px 5px #d2d3d2;
-    border: 1px solid #595f54;
+    box-shadow: inset 2px 2px 5px #9fa192;
+    border: 1px solid #9fa192;
     padding: .5rem;
 
 }
 
 .side-nav > h2{
     text-align: center;
-    color: #595f54;
+    color: black;
     
 }
 
@@ -75,19 +76,21 @@ tr:nth-of-type(odd){
         text-align: center;
         display: block;
         line-height:3rem;
-        color:  #595f54;
+        color:  white;
         text-decoration:none;
         border-top:1px solid  #595f54;
         border-bottom:1px solid  #595f54;
         border-radius:.3rem;
-        box-shadow: inset 2px 2px 15px 2px #d2d3d2;
+	background-color:#9fa192;
+        box-shadodw: inset 2px 2px 15px 2px #d2d3d2;
     }
 
     
 
     a:hover{
-        color: white;
-        background-color:#595f54;
+        color: #9fa192;
+        background-color:white;
+	border:1px solid #9fa192;
         
     }
 } 
@@ -110,14 +113,14 @@ tr:nth-of-type(odd){
     padding: 1rem;
     border-top-left-radius: 1rem;
     border-top: 1px solid #595f54;
+    background-color:white;
 }
 
 .main-area{
     box-shadow: inset 2px 2px 5px #d2d3d2;
     padding: 1rem;
     border-top-left-radius: 1rem;
-    background-color:blue;
-    color:white;
+    color:black;
     border: 1px solid #595f54;
   
 }

@@ -12,8 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('candidates', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+		$table->id();
+		$table->foreignId('user_id');
+		//should i use join operations for position table?
+		$table->string('position');
+		$table->string('profile_image_path');
+		$table->string('slogan');
+		$table->string('party');
+		$table->bigInteger('votes');
+		$table->timestamps();
         });
     }
 

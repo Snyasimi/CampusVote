@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +25,5 @@ Route::get('/diddy', function () {
 Route::get('/user-home', function () {
     return view('user-view.home-page');
 });
+
+Route::resource('user',UserController::class);

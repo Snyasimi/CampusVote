@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\User;
+use App\Services\{UserService,CandidateService};
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -10,9 +12,32 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     protected $userService;
+     protected $candidateService;
+
+     public function __construct(UserService $userService,CandidateService $candidateService)
+     {
+
+	     $this->candidateService = $candidateService;
+	     $this->userService = $userService; 
+     }
+
     public function index()
     {
-        //
+	    //
+	    
+	    $data = [
+		    'Chairperson' => $this->candidateService->getByPosition('Chairperson'),
+		    'Vicechair' => $this->candidateService->getByPosition('Vice chair'),
+		    'Secretary' => $this->candidateService->getByPosition('Secretary'),
+		    'Sports and welfare' => $this->candidateService->getByPosition('Sports and welfare'),
+		    'Academic' => $this->candidateService->getByPosition('Academic'),
+	    ];
+		
+	    return view('user-view.home-page',[
+		    'data' => $data
+	    ]);
     }
 
     /**
