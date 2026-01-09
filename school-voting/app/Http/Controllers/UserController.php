@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Services\{UserService,CandidateService};
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -25,7 +26,8 @@ class UserController extends Controller
 
     public function index()
     {
-	    //
+	    $user = Auth::user();
+
 	    
 	    $data = [
 		    'Chairperson' => $this->candidateService->getByPosition('Chairperson'),
@@ -35,7 +37,14 @@ class UserController extends Controller
 		    'Academic' => $this->candidateService->getByPosition('Academic'),
 	    ];
 		
+	    if($user)
+	    {
+		    //some logic here to render an auth user view
+	    }
+	
+	    #TODO add anon views 
 	    return view('user-view.home-page',[
+		    'user' => $user,
 		    'data' => $data
 	    ]);
     }

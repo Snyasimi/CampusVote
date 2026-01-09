@@ -17,13 +17,16 @@ main{
     
 }
 fieldset{
-    display: flex;
-    gap: 1rem;
-    flex-flow: row wrap;
     border-radius: .5rem;
     padding:1rem;
-    justify-content: center;
     
+}
+
+fieldset > div {
+
+	display:grid;
+	grid-template-columns:repeat(2,minmax(500px,1fr));
+	gap:1rem;
 }
 legend{
     font-size: 1.6rem;

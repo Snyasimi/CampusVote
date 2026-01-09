@@ -18,57 +18,83 @@
 
        
         <div class="form-container">
-            <form>
+            <form method="POST" action="{{ route('registerUser') }}">
+                @csrf
+            
                 <!-- First Name and Last Name -->
                 <h2>Sign up</h2>
                 <div class="names">
                     <label for="first-name">First Name:
-                        <input type="text" id="first-name" name="first-name" required>
+                        <input type="text" id="first_name" name="first_name" value="{{ old('first_name') }}" required>
                     </label>
-                    
-
+                    @if($errors->has('first_name'))
+                        <div class="error">{{ $errors->first('first_name') }}</div>
+                    @endif
+            
                     <label for="last-name">Last Name:
-                        <input type="text" id="last-name" name="last-name" required>
+                        <input type="text" id="last_name" name="last_name" value="{{ old('last_name') }}" required>
                     </label>
-                   
+                    @if($errors->has('last_name'))
+                        <div class="error">{{ $errors->first('last_name') }}</div>
+                    @endif
                 </div>
-
+            
                 <div>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+                    @if($errors->has('email'))
+                        <div class="error">{{ $errors->first('email') }}</div>
+                    @endif
                 </div>
-
-                <!-- School -->
+            
                 <div>
-                    <label for="school">School:</label>
-                    <input type="text" id="school" name="school" required>
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="text" id="phone_number" name="phone_number" value="{{ old('phone_number') }}" required>
+                    @if($errors->has('phone_number'))
+                        <div class="error">{{ $errors->first('phone_number') }}</div>
+                    @endif
                 </div>
-
-                <!-- Registration Number -->
+            
                 <div>
-                    <label for="registration-number">Registration Number:</label>
-                    <input type="text" id="registration-number" name="registration-number" required>
+                    <label for="role_number">Registration Number:</label>
+                    <input type="text" id="role_number" name="role_number" value="{{ old('role_number') }}" required>
+                    @if($errors->has('role_number'))
+                        <div class="error">{{ $errors->first('role_number') }}</div>
+                    @endif
                 </div>
-
-                <!-- Password and Confirm Password -->
-                <div class="passdwd">
+            
+                <div class="password">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
-
-                   
+                    @if($errors->has('password'))
+                        <div class="error">{{ $errors->first('password') }}</div>
+                    @endif
                 </div>
+            
                 <div>
-
-                    <label for="confirm-password">Confirm Password:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    @if($errors->has('confirm_password'))
+                        <div class="error">{{ $errors->first('confirm_password') }}</div>
+                    @endif
                 </div>
-
-                <!-- Buttons -->
+            
                 <div class="buttons">
                     <button type="submit">Sign Up</button>
                 </div>
+            
+                <!-- Optional: Global errors block -->
+                @if($errors->any())
+                    <div class="errors">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
+            
         </div>
         
     </main>

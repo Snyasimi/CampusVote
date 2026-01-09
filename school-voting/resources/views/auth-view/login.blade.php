@@ -17,26 +17,30 @@
     <main>
         <div class="login-form">
             
-            <form action="login_process.php" method="post">
+            <form action="{{ route('authenticateUser') }}" method="post">
+                @csrf
                 <h2>Please Log In</h2>
+            
                 <div>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    @if ($errors->has('email'))
+                        <span style="color: red;">{{ $errors->first('email') }}</span>
+                    @endif
                 </div>
-
-               <div>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-               </div>
-
+            
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    @if ($errors->has('password'))
+                        <span style="color: red;">{{ $errors->first('password') }}</span>
+                    @endif
+                </div>
+            
                 <div>
                     <button type="submit">Login</button>
                 </div>
-                
-                
-                
+            
                 <p>Click Here to Sign up</p>
             </form>
 

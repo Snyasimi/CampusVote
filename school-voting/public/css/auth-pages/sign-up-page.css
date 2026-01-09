@@ -107,7 +107,7 @@ form{
    margin: auto;
     color:#595f54 ;
     border: 1px solid #595f54;
-    min-width: 70%;
+    min-width: 50%;
     box-shadow: inset 2px 2px 5px 3px#d2d3d2;
     display: flex;
     flex-flow: column wrap;

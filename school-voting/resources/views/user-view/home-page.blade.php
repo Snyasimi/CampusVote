@@ -12,33 +12,44 @@
 
     <main>
 
+@if($user)
+
         <div class="side-nav">
             
                 <h2>Navigation</h2>
                 <!-- Add navigation or logo here -->
-        
+
+
 
             <div class="student-details">
                 <h3>My details</h3>
 
                 <div class="student-name">
                     <p><strong>Name</strong></p>
-                    <p> Bian Otieno</p>
+                    <p> {{ $user->first_name }}</p>
                 </div>
 
                 <div class="student-status">
                     <p><strong>Voting Status</strong></p>
-                    <p> Not Voted</p>
-                </div>
+		    <p>
+				@if($user->vote_status == true)
+					Voted
+				@else
+					Not voted
+				@endif 
+		   </p>
+		</div>
 
-            </div>
+	    </div>
+
 
             <ul>
-                <li><a href="vote.html">Vote Page</a></li>
+                <li><a href="{{ route('vote.index') }}">Vote Page</a></li>
                 <li><a href="apply.html">Apply as a Candidate</a></li>
                 <li><a href="logout.html" class="logout-button">Logout</a></li>
             </ul>
-        </div>
+	</div>
+@endif
 
         <div class="main-area">
             <!-- Chairperson Table -->

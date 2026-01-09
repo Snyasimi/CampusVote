@@ -30,20 +30,20 @@ tr{
 }
 
 tr:nth-of-type(odd){
-    background-color: #9fa192;
+    background-color: #585858;
     color: white;
 }
 .thead{
     
     color: white;
     font-weight: bold;
-    background-color: #9fa192;
+    background-color: #0e1010;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
 .student-details> h3{
     color: whitesmoke;
-    background-color: #9fa192;
+    background-color: #0e1010;
     border-top-left-radius: 1rem;
     border-top-right-radius:1rem ;
 }
@@ -53,8 +53,8 @@ tr:nth-of-type(odd){
     min-height: 100vh;
     border-top-right-radius:1rem ;
     color: black;
-    box-shadow: inset 2px 2px 5px #9fa192;
-    border: 1px solid #9fa192;
+    box-shadow: inset 2px 2px 5px #0e1010;
+    border: 1px solid #0e1010;
     padding: .5rem;
 
 }
@@ -81,16 +81,16 @@ tr:nth-of-type(odd){
         border-top:1px solid  #595f54;
         border-bottom:1px solid  #595f54;
         border-radius:.3rem;
-	background-color:#9fa192;
+	background-color:#0e1010;
         box-shadodw: inset 2px 2px 15px 2px #d2d3d2;
     }
 
     
 
     a:hover{
-        color: #9fa192;
+        color: #0e1010;
         background-color:white;
-	border:1px solid #9fa192;
+	border:1px solid #0e1010;
         
     }
 } 
@@ -107,7 +107,8 @@ tr:nth-of-type(odd){
 }
 .table-container{
     display: grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(500px,1fr));
+
     gap:.5rem;
     box-shadow: inset 2px 2px 5px #d2d3d2;
     padding: 1rem;
