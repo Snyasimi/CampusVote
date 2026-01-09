@@ -20,7 +20,7 @@ class CandidatesController extends Controller
      */
     public function create()
     {
-        //
+        return view('candidate-view.candidateApplicationForm');
     }
 
     /**

@@ -51,7 +51,7 @@ class CandidateService
 		$candidates = [
 	
 			'chairPerson' => $this->getAcceptedCandidatesByPosition('Chairperson'),
-			'viceChair' => $this->getAcceptedCandidatesByPosition('ViceChair'),
+			'viceChair' => $this->getAcceptedCandidatesByPosition('Vice-Chair'),
 			'secretary' => $this->getAcceptedCandidatesByPosition('Secretary'),
 			'SportsAndWelfare' => $this->getAcceptedCandidatesByPosition('Sports and Welfare'),
 			'academic' => $this->getAcceptedCandidatesByPosition('Academic'),

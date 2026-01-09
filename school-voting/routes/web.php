@@ -1,7 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{SecurityController,UserController,VotingController};
+
+use App\Http\Controllers\{
+	
+	SecurityController,
+	UserController,
+	VotingController,
+	CandidatesController,
+};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,14 +32,16 @@ Route::get('/diddy', function () {
 Route::get('/user-home', function () {
     return view('user-view.home-page');
 });
-
+Route::resource('candidate',CandidatesController::class);
 Route::resource('user',UserController::class);
 Route::resource('vote',VotingController::class);
+
 Route::controller(SecurityController::class)->group(function(){
 
 	Route::get('Signup','signUpPage')->name('signUpPage');
 	Route::post('register','registerUser')->name('registerUser');
 	Route::get('login','loginPage')->name('loginPage');
 	Route::post('authenticate','authenticate')->name('authenticateUser');
+	Route::post('logout','logout')->name('logout');
 }
 );

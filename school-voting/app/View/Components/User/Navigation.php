@@ -1,21 +1,21 @@
 <?php
 
-namespace App\View\Components\User\Pages;
+namespace App\View\Components\User;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Home extends Component
+class Navigation extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $pageData;
-    public function __construct($pageData)
+	public $user;
+    public function __construct($user)
     {
-        //
-        $this->pageData = $pageData;
+	    //
+	    $this->user = $user;
     }
 
     /**
@@ -23,6 +23,6 @@ class Home extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.user.pages.home');
+        return view('components.user.navigation');
     }
 }

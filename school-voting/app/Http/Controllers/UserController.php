@@ -31,7 +31,7 @@ class UserController extends Controller
 	    
 	    $data = [
 		    'Chairperson' => $this->candidateService->getByPosition('Chairperson'),
-		    'Vicechair' => $this->candidateService->getByPosition('Vice chair'),
+		    'Vicechair' => $this->candidateService->getByPosition('Vice-Chair'),
 		    'Secretary' => $this->candidateService->getByPosition('Secretary'),
 		    'Sports and welfare' => $this->candidateService->getByPosition('Sports and welfare'),
 		    'Academic' => $this->candidateService->getByPosition('Academic'),

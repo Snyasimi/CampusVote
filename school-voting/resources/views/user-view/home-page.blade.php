@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,42 +13,7 @@
     <main>
 
 @if($user)
-
-        <div class="side-nav">
-            
-                <h2>Navigation</h2>
-                <!-- Add navigation or logo here -->
-
-
-
-            <div class="student-details">
-                <h3>My details</h3>
-
-                <div class="student-name">
-                    <p><strong>Name</strong></p>
-                    <p> {{ $user->first_name }}</p>
-                </div>
-
-                <div class="student-status">
-                    <p><strong>Voting Status</strong></p>
-		    <p>
-				@if($user->vote_status == true)
-					Voted
-				@else
-					Not voted
-				@endif 
-		   </p>
-		</div>
-
-	    </div>
-
-
-            <ul>
-                <li><a href="{{ route('vote.index') }}">Vote Page</a></li>
-                <li><a href="apply.html">Apply as a Candidate</a></li>
-                <li><a href="logout.html" class="logout-button">Logout</a></li>
-            </ul>
-	</div>
+ <x-user.navigation :user="$user" />
 @endif
 
         <div class="main-area">
@@ -107,4 +72,7 @@
 </footer>
 
 </body>
-</html>
+</html> --}}
+
+
+<x-user.pages.home :pageData="$data"/>

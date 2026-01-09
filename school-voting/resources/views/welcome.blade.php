@@ -151,8 +151,8 @@ footer {
       </div>
       <nav>
         <ul>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/signup">Sign Up</a></li>
+          <li><a href="{{ route('loginPage') }}">Login</a></li>
+          <li><a href="{{ route('signUpPage') }}">Sign Up</a></li>
         </ul>
       </nav>
     </div>

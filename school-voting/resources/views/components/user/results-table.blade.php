@@ -18,7 +18,7 @@
     <tr>
 
 		<td>{{ $loop->index +1 }}</td>
-		<td>{{ $candidate->user->name }}</td>
+		<td>{{ $candidate->user->first_name }}</td>
 		<td>{{ $candidate->user->school ?? 'Computing'}}</td>
 		<td>{{ $candidate->votes }}</td>
 	@empty
