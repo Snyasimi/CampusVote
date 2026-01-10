@@ -28,6 +28,8 @@ class UserFactory extends Factory
 		'last_name' => fake()->name(),
 		'role' => fake()->randomElement(['stu','lec']),
 		'role_number' => fake()->regexify('^B?BIT/\d{4}/\d+$'),
+		//TODO add a schools model
+		'school' => fake()->randomElement(['Computing and informatics','School of business','School of math']),
 		'phone_number' => fake()->phoneNumber(),
         'vote_status' => fake()->randomElement([true,false]),
 		'account_status' =>fake()->randomElement(['active','suspended','flagged']),

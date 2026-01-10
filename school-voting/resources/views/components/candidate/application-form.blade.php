@@ -22,7 +22,7 @@
                 <option value="Vice-Chair">Vice-Chair</option>
                 <option value="Treasurer">Treasurer</option>
                 <option value="Secretary General">Secretary General</option>
-                <option value="Sports and Student Welfare">Sports and Student Welfare</option>
+                <option value="Sports and Welfare">Sports and Student Welfare</option>
             </select>
             @error('position') <!-- Cleaner Blade directive for error handling -->
                 <span style="color: red;">{{ $message }}</span>

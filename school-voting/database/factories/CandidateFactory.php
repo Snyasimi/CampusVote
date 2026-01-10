@@ -20,9 +20,10 @@ class CandidateFactory extends Factory
         return [
 		'user_id' => \App\Models\User::factory(),
 		'position' => fake()->randomElement(['Chairperson','Vice-Chair', 'Treasurer', 'Sports and welfare', 'Academic', 'Secretary' ]),
-		'party' => 'Renegades',
+		'party' => fake()->randomElement(['Renegades','Big five','trotters']),
+		'candidate_status' => fake()->randomElement(['approved','flagged','disqualified','review']),
 		'Profile_image_path' => 'String of text',
-		'slogan' => 'For better For worse',
+		'slogan' => fake()->sentence(),
 		'votes' => fake()->numberBetween(1,200),
         ];
     }

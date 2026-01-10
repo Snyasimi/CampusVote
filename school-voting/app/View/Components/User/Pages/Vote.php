@@ -11,9 +11,12 @@ class Vote extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $pageData;
+
+    public function __construct($pageData)
     {
         //
+        $this->pageData = $pageData;
     }
 
     /**

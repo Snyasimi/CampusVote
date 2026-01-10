@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('candidates', function (Blueprint $table) {
 		$table->id();
-		$table->foreignId('user_id');
+		$table->enum('candidate_status',['approved','flagged','disqualified','review'])->default('review');
+		$table->foreignId('user_id')->constrained('users');
 		//should i use join operations for position table?
 		$table->string('position');
 		$table->string('profile_image_path');
 		$table->string('slogan');
 		$table->string('party');
-		$table->bigInteger('votes');
+		$table->bigInteger('votes')->default(0);
+
 		$table->timestamps();
         });
     }

@@ -1,0 +1,166 @@
+body{
+
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #f8f8f8;
+    padding:0;
+    margin: 0;
+
+}
+body > *{
+
+    flex:1;
+}
+/*
+main{
+
+	display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap:1rem;
+    
+ 
+}
+*/
+main{
+
+    display: flex;
+    flex-flow: row wrap;
+    gap:.5rem;
+
+}
+
+main > *:nth-child(2) {
+    flex:2; /* Each child takes 50% of the width */
+}
+
+.main-area{
+
+    flex:1;
+    padding:1rem;
+
+}
+/**********************************************/
+/* General Styling for the Side Navigation   */
+/**********************************************/
+.side-nav {
+    display: flex;
+    flex-direction: column; /* Stack children in a vertical layout */
+    padding: 1rem;
+    background-color: #f8f8f8; /* Subtle grey background for navigation */
+    border-right: 2px solid #ccc; /* Vertical separator to the right */
+    height: 100vh; /* Make it occupy the full vertical space */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/**********************************************/
+/* Student Details Section                    */
+/**********************************************/
+.student-details {
+    background-color: #ffffff; /* White background for better contrast */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 1.5rem;
+    margin-bottom: 2rem; /* Add spacing below the details card */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Left-align text for a structured look */
+}
+
+.student-details h3 {
+    font-size: 18px;
+    color: #333; /* Dark grey for heading */
+    margin-bottom: 1rem; /* Add spacing below the heading */
+    text-align: center; /* Center text for the heading */
+}
+
+.student-details p {
+    font-size: 14px;
+    color: #555; /* Neutral grey for text content */
+    margin: 0.5rem 0; /* Subtle spacing between text */
+}
+
+/**********************************************/
+/* Navigation Links Styling                   */
+/**********************************************/
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Stack nav links vertically */
+    list-style: none; /* Remove default bullets from list items */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    gap: 0.8rem; /* Add spacing between links */
+}
+
+.nav-links li > a {
+    display: block;
+    padding: 0.8rem 1rem; /* Add padding for clickable area */
+    font-size: 16px; /* Slightly larger font size for links */
+    color: #333; /* Neutral grey for text */
+    text-decoration: none; /* Remove underlines */
+    border: 1px solid transparent; /* Border for hover interactions */
+    border-radius: 4px; /* Rounded corners for links */
+    background-color: #ffffff; /* White background */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    text-align: center; /* Center align the text */
+}
+
+.nav-links li > a:hover {
+    background-color: #eee; /* Light grey on hover */
+    border-color: #ccc; /* Add subtle border on hover */
+    color: #000; /* Darken text color on hover */
+}
+
+/**********************************************/
+/* Logout Button Styling                      */
+/**********************************************/
+.nav-links li form button {
+    width: 100%; /* Make the button span the full width of its container */
+    padding: 0.8rem 1rem; /* Add padding for clickable area */
+    font-size: 16px; /* Font size consistency with links */
+    background-color: #ff4c4c; /* Red background for logout button */
+    color: #ffffff; /* Contrast text */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-align: center; /* Centered text */
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+.nav-links li form button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/**********************************************/
+/* Responsive Adjustments for Mobile Devices  */
+/**********************************************/
+@media (max-width: 768px) {
+    .side-nav {
+        height: auto; /* Let the nav height adjust to content on smaller screens */
+        border-right: none; /* Remove border on small screens */
+        box-shadow: none; /* Remove shadow on small screens */
+        padding: 1rem 0;
+    }
+
+    .student-details {
+        margin-bottom: 1.5rem; /* Adjust spacing between sections */
+    }
+
+    .nav-links li > a, 
+    .nav-links li form button {
+        font-size: 14px; /* Decrease font size for smaller screens */
+        padding: 0.6rem; /* Adjust padding for smaller screens */
+    }
+
+    .nav-links {
+        gap: 0.6rem; /* Reduce gap on smaller devices */
+    }
+}
+
+
+@media( max-width:800px){
+
+	main{
+
+		display:grid;
+		grid-template-columns: 1fr;
+	}
+}

@@ -18,7 +18,8 @@ return new class extends Migration
 	    $table->enum('role',['stu','lec'])->default('stu');
 	    $table->string('role_number');
 	    $table->string('phone_number');
-        $table->boolean('vote_status')->default(false);
+	    $table->string('school');
+            $table->boolean('vote_status')->default(false);
 	    $table->enum('account_status',['active','suspended','flagged'])->default('suspended');
 	    $table->string('profile_picture')->nullable();
 	    $table->string('email')->unique();

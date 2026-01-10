@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\candidates;
 use Illuminate\Http\Request;
+use App\Http\Requests\CandidateRegistrationRequest;
+Use App\Services\CandidateService;
 
 class CandidatesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
+	protected $candidateService;
+	public function __construct(CandidateService $candidateService)
+	{
+		$this->candidateService = $candidateService;
+	}
     public function index()
     {
         //
@@ -26,9 +34,11 @@ class CandidatesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CandidateRegistrationRequest $request)
     {
-        //
+	    //
+	    $candidateDetails = $request->validated();
+	    $this->candidateService->registerCandidate($request->user(),$candidateDetails);
     }
 
     /**

@@ -10,14 +10,15 @@ h2,h3{
     padding:.5rem;
    
 }
-main{
+/* main{
     display:grid;
     grid-template-columns: 2fr 7fr;
     gap:1rem;
     
 }
+*/
 table{
-    min-width: 100%;
+    min-width:100%;
     border-collapse: collapse;
     border: 1px solid #595f54;
     text-align: center;
@@ -125,3 +126,5 @@ tr:nth-of-type(odd){
     border: 1px solid #595f54;
   
 }
+
+

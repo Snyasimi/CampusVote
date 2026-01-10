@@ -1,8 +1,8 @@
     <!-- I begin to speak only when I am certain what I will say is not better left unsaid. - Cato the Younger -->
 
 	@push('stylesheets')
-		<link rel="stylesheet" href="{{asset('css/userPages/components/navigation.css')}}">
-	@endpush
+    <link rel="stylesheet" href="{{asset('css/userPages/components/homepage.css')}}">
+    @endpush
 
 	
 
@@ -33,7 +33,8 @@
     </div>
 
 
-    <ul>
+     <ul class="nav-links">
+	<li><a href="{{ route('user.index') }}">Home Page</a></li>
 	<li><a href="{{ route('vote.index') }}">Vote Page</a></li>
 	<li><a href="{{ route('candidate.create') }}">Apply as a Candidate</a></li>
 	<li>

@@ -60,6 +60,22 @@ class CandidateService
 		return $candidates;
 	}
 
+	public function registerCandidate($user, array $candidateDetails)
+	{
+
+		$candidateProfilePicture = $candidateDetails['profile_image_path']->store('candidateProfiles');
+		
+		$candidateDetails['user_id'] = $user->id;
+		$candidateDetails['profile_image_path'] = $candidateProfilePicture;	
+		$candidate = Candidate::create($candidateDetails);
+
+
+		return $candidate;
+
+
+	}
+
+
 }
 
 

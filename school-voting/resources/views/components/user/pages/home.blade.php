@@ -1,10 +1,11 @@
     <!-- It is quality rather than quantity that matters. - Lucius Annaeus Seneca -->
 
+
+<x-user.layout>
+
     @push('stylesheets')
     <link rel="stylesheet" href="{{asset('css/userPages/components/homepage.css')}}">
     @endpush
-
-<x-user.layout>
 
     <div class="main-area">
         <!-- Chairperson Table -->

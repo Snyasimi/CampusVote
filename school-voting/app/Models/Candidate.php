@@ -10,6 +10,13 @@ class Candidate extends Model
 	use HasFactory;
 
 
+	protected $fillable = [
+		'user_id',
+		'position',
+		'profile_image_path',
+		'slogan',
+		'party'
+	];
 
 
 	public function user(){
