@@ -37,6 +37,7 @@
 	<li><a href="{{ route('user.index') }}">Home Page</a></li>
 	<li><a href="{{ route('vote.index') }}">Vote Page</a></li>
 	<li><a href="{{ route('candidate.create') }}">Apply as a Candidate</a></li>
+	<li><a href="{{ route('faq') }}">FAQ</a></li>
 	<li>
 		<form action="{{ route('logout') }}" method="POST">
 		@csrf

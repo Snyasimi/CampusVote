@@ -8,6 +8,7 @@ use App\Http\Controllers\{
 	UserController,
 	VotingController,
 	CandidatesController,
+	FaqController,
 };
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::get('/user-home', function () {
 Route::resource('candidate',CandidatesController::class);
 Route::resource('user',UserController::class);
 Route::resource('vote',VotingController::class);
+Route::get('faq', [FaqController::class, 'index'])->name('faq');
 
 Route::controller(SecurityController::class)->group(function(){
 
