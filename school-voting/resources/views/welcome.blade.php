@@ -153,6 +153,7 @@ footer {
         <ul>
           <li><a href="{{ route('loginPage') }}">Login</a></li>
           <li><a href="{{ route('signUpPage') }}">Sign Up</a></li>
+          <li><a href="{{ route('faq') }}">FAQ</a></li>
         </ul>
       </nav>
     </div>
