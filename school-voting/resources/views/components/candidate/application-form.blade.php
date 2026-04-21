@@ -45,7 +45,27 @@
                 <span style="color: red;">{{ $message }}</span>
             @enderror
         </div>
+
+
+        <div>
+            <label for="background_image">Background Image:</label>
+            
+            <!-- Div for Image Preview --> 
+            <div id="image-preview" style="margin-bottom: 10px; text-align: center;">
+                <img id="preview-img" src="" alt="Selected Image" style="display: none; max-width: 100px; max-height: 100px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
     
+            <!-- File Input Field -->
+            <input type="file" id="background_image" name="background_image_path" accept="image/*" required onchange="previewImage(event)">
+            
+            @error('background_image_path') <!-- Blade error handling -->
+                <span style="color: red;">{{ $message }}</span>
+            @enderror
+        </div>
+
+
+
+
         <!-- Slogan -->
         <div>
             <label for="slogan">Slogan:</label>

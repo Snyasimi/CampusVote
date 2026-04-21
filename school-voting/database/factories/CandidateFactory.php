@@ -22,7 +22,22 @@ class CandidateFactory extends Factory
 		'position' => fake()->randomElement(['Chairperson','Vice-Chair', 'Treasurer', 'Sports and welfare', 'Academic', 'Secretary' ]),
 		'party' => fake()->randomElement(['Renegades','Big five','trotters']),
 		'candidate_status' => fake()->randomElement(['approved','flagged','disqualified','review']),
-		'Profile_image_path' => 'String of text',
+		'profile_image_path' => fake()->randomElement(['candidateProfiles/1.png',
+			'candidateProfiles/3.png',
+			'candidateProfiles/8.png',
+			'candidateProfiles/6.png',
+			'candidateProfiles/5.png',
+			'candidateProfiles/2.png',
+			'candidateProfiles/11.png']),
+
+		'background_image_path' => fake()->randomElement(['candidateProfiles/9.png',
+			'candidateProfiles/4.png',
+			'candidateProfiles/10.png',
+			'candidateProfiles/7.png',
+			'candidateProfiles/13.png',
+			'candidateProfiles/12.png',
+			'candidateProfiles/10.png']),
+
 		'slogan' => fake()->sentence(),
 		'votes' => fake()->numberBetween(1,200),
         ];

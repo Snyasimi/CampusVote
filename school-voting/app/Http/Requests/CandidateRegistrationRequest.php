@@ -27,6 +27,7 @@ class CandidateRegistrationRequest extends FormRequest
             'slogan' => ['required'],
             'party' => ['required'],
 	    'profile_image_path' => ['required'],
+	    'background_image_path' => ['required'],
 
         ];
     }

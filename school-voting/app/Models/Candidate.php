@@ -14,6 +14,7 @@ class Candidate extends Model
 		'user_id',
 		'position',
 		'profile_image_path',
+		'background_image_path',
 		'slogan',
 		'party'
 	];

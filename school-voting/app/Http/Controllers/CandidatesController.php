@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\candidates;
+use App\Models\Candidate;
 use Illuminate\Http\Request;
 use App\Http\Requests\CandidateRegistrationRequest;
 Use App\Services\CandidateService;
@@ -20,7 +20,8 @@ class CandidatesController extends Controller
 	}
     public function index()
     {
-        //
+	    //This should be a protected route for the admin to view all candidate resources
+        return view('candidate-view.index');
     }
 
     /**
@@ -39,14 +40,17 @@ class CandidatesController extends Controller
 	    //
 	    $candidateDetails = $request->validated();
 	    $this->candidateService->registerCandidate($request->user(),$candidateDetails);
+
+	    //This should redirect to the candidates profile
+	    return redirect()->route('user.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(candidates $candidates)
+    public function show(Candidate $candidate)
     {
-        //
+        return view('candidate-view.show',compact('candidate'));
     }
 
     /**
@@ -54,7 +58,7 @@ class CandidatesController extends Controller
      */
     public function edit(candidates $candidates)
     {
-        //
+        return view('candidate-view.edit');
     }
 
     /**

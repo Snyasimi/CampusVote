@@ -18,6 +18,7 @@ return new class extends Migration
 		//should i use join operations for position table?
 		$table->string('position');
 		$table->string('profile_image_path');
+		$table->string('background_image_path');
 		$table->string('slogan');
 		$table->string('party');
 		$table->bigInteger('votes')->default(0);

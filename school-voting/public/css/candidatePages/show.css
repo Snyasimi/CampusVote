@@ -1,0 +1,75 @@
+@import url('../userPages/layout.css'); 
+
+img{
+
+	max-width:100%;
+	object-fit:cover;
+}
+
+.background-img{
+
+	& img{
+
+		max-width:100%;
+		object-fit:cover;
+		
+	}
+}
+
+.main-area{
+
+	
+	display:flex;
+	flex-flow:column wrap;
+	gap:1rem;
+}
+
+.main-area > * {
+	flex:3;
+	
+}
+.main-area > *:not(:last-child){
+
+	flex:1;
+}
+
+.banner{
+
+	display:grid;
+	flex-flow:column wrap;
+	grid-template-rows:1fr 1fr;
+}
+.banner > * {
+
+	
+	
+}
+
+.banner:first-child{
+	flex:3;
+	background-size: cover; 
+	background-position: center;
+}
+
+.candidate-media{
+
+	display:grid;
+	grid-template-columns:2fr 4fr;
+}
+
+figure{
+}
+.profile-img{
+
+	/* position:relative;
+	bottom:50%;
+	left:10%;
+	*/
+	transform:translate(0%,-60%);	
+
+}
+
+.candidate_desc{
+
+	padding:1rem;
+}

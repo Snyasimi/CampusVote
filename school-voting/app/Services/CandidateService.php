@@ -47,6 +47,7 @@ class CandidateService
 
 	public function getContestingCandidates()
 	{
+		//TODO Refactor this lol, one call then sepatare the data
 
 		$candidates = [
 	
@@ -63,10 +64,12 @@ class CandidateService
 	public function registerCandidate($user, array $candidateDetails)
 	{
 
-		$candidateProfilePicture = $candidateDetails['profile_image_path']->store('candidateProfiles');
-		
+		$candidateProfilePicture = $candidateDetails['profile_image_path']->store('candidateProfiles','public');
+		$candidateBackgroundPicture = $candidateDetails['background_image_path']->store('candidateBackground','public');
+
 		$candidateDetails['user_id'] = $user->id;
-		$candidateDetails['profile_image_path'] = $candidateProfilePicture;	
+		$candidateDetails['profile_image_path'] = $candidateProfilePicture;
+		$candidate['background_image_path'] = $candidateBackgroundPicture;	
 		$candidate = Candidate::create($candidateDetails);
 
 
