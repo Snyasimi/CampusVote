@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\VotingRequest;
 use App\Services\{CandidateService,VotingService};
 
 class VotingController extends Controller
 {
 
-	protected $votingSevice,$candidateService;
+	protected $votingService, $candidateService;
 
-	public function __construct(VotingService $votingService,CandidateService $candidateService)
+	public function __construct(VotingService $votingService, CandidateService $candidateService)
 	{
 		$this->votingService = $votingService;
 		$this->candidateService = $candidateService;
@@ -20,20 +21,35 @@ class VotingController extends Controller
 
 	public function index()
 	{
+		$user = Auth::user();
+
+		if ($user && $user->vote_status) {
+			return redirect()->route('user.index')->with('info', 'You have already cast your vote.');
+		}
+
 		$data = $this->candidateService->getContestingCandidates();
 
-		return view('user-view.voting-page',[
-
+		return view('user-view.voting-page', [
 			'data' => $data,
 		]);
 	
 	}
 
-	public function castVote(VotingRequest $request)
+	public function store(VotingRequest $request)
 	{
-		$votingData = $request->validated();
-		$status = $this->candidateService->castVote($votingData);
+		$user = Auth::user();
 
-		return view('user-view.');
+		if ($user->vote_status) {
+			return redirect()->route('user.index')->with('info', 'You have already cast your vote.');
+		}
+
+		$votingData = $request->validated();
+		$status = $this->votingService->castVote($user, $votingData);
+
+		if ($status) {
+			return redirect()->route('user.index')->with('success', 'Your vote has been cast successfully!');
+		}
+
+		return redirect()->route('user.index')->with('info', 'You have already cast your vote.');
 	}
 }

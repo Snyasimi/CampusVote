@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
 	    $table->string('last_name');
-	    $table->enum('role',['stu','lec'])->default('stu');
+	    $table->enum('role',['stu','lec','admin'])->default('stu');
 	    $table->string('role_number');
 	    $table->string('phone_number');
 	    $table->string('school');

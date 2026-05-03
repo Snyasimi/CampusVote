@@ -13,7 +13,7 @@
         </div>
         <label>
             Select 
-            <input type="radio" name="{{ $candidate->position}}" value="{{ $candidate->id }}">
+            <input type="radio" name="{{ Str::slug($candidate->position) }}" value="{{ $candidate->id }}" required>
         </label>
     </div>
 </div>

@@ -8,6 +8,8 @@ use App\Http\Controllers\{
 	UserController,
 	VotingController,
 	CandidatesController,
+	ApplicationsController,
+	PositionsController,
 };
 /*
 |--------------------------------------------------------------------------
@@ -25,17 +27,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/diddy', function () {
-    return view('auth-view.login');
-});
-
-Route::get('/user-home', function () {
-    return view('user-view.home-page');
-});
-Route::resource('candidate',CandidatesController::class);
-Route::resource('user',UserController::class);
-Route::resource('vote',VotingController::class);
-
 Route::controller(SecurityController::class)->group(function(){
 
 	Route::get('Signup','signUpPage')->name('signUpPage');
@@ -45,3 +36,28 @@ Route::controller(SecurityController::class)->group(function(){
 	Route::post('logout','logout')->name('logout');
 }
 );
+
+// Authenticated user routes
+Route::middleware('auth')->group(function () {
+
+	Route::resource('user', UserController::class);
+	Route::resource('candidate', CandidatesController::class);
+
+	// Voting routes — also guard against already voted
+	Route::middleware('has-not-voted')->group(function () {
+		Route::get('vote', [VotingController::class, 'index'])->name('vote.index');
+		Route::post('vote', [VotingController::class, 'store'])->name('vote.store');
+	});
+});
+
+// Admin routes
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+
+	Route::get('/', [UserController::class, 'adminHome'])->name('home');
+
+	// Candidate applications (approve / reject)
+	Route::resource('applications', ApplicationsController::class)->only(['index', 'update']);
+
+	// Positions management
+	Route::resource('positions', PositionsController::class)->only(['index', 'store', 'destroy']);
+});

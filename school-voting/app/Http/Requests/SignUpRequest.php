@@ -30,11 +30,12 @@ class SignUpRequest extends FormRequest
 		//'role' => ['required'],
 		'role_number' => ['required'],
 		'phone_number' => ['required'],
+		'school' => ['required'],
 		'password' => ['required'],
 		'confirm_password' => ['required','same:password'],
 		//'account_status' => ['required'],
 		//'profile_picture' => ['required'],
-		'email' => ['required'],
+		'email' => ['required', 'email', 'unique:users,email'],
         ];
     }
 
@@ -44,15 +45,14 @@ class SignUpRequest extends FormRequest
         'first_name.required' => 'First name is required.',
         'last_name.required' => 'Last name is required.',
         'email.required' => 'Email address is required.',
+        'email.email' => 'Please enter a valid email address.',
+        'email.unique' => 'This email address is already registered.',
         'phone_number.required' => 'Phone number is required.',
+        'school.required' => 'School / Faculty is required.',
         'role_number.required' => 'Registration number is required.',
         'password.required' => 'Password is required.',
         'confirm_password.required' => 'Confirm password is required.',
         'confirm_password.same' => 'Confirm password must match the password.',
-        // Uncomment and customize if you use these later
-        // 'role.required' => 'Role is required.',
-        // 'account_status.required' => 'Account status is required.',
-        // 'profile_picture.required' => 'Profile picture is required.',
     ];
 }
 

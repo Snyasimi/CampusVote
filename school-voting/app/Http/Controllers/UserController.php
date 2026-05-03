@@ -33,7 +33,7 @@ class UserController extends Controller
 		    'Chairperson' => $this->candidateService->getByPosition('Chairperson'),
 		    'Vicechair' => $this->candidateService->getByPosition('Vice-Chair'),
 		    'Secretary' => $this->candidateService->getByPosition('Secretary'),
-		    'Sports and welfare' => $this->candidateService->getByPosition('Sports and welfare'),
+		    'Sports and welfare' => $this->candidateService->getByPosition('Sports and Welfare'),
 		    'Academic' => $this->candidateService->getByPosition('Academic'),
 	    ];
 		
@@ -47,6 +47,26 @@ class UserController extends Controller
 		    'user' => $user,
 		    'data' => $data
 	    ]);
+    }
+
+    /**
+     * Show the admin dashboard.
+     */
+    public function adminHome()
+    {
+        $totalCandidates = \App\Models\Candidate::count();
+        $totalVoters     = \App\Models\User::where('vote_status', true)->count();
+        $totalUsers      = \App\Models\User::count();
+
+        $data = [
+            'Chairperson'      => $this->candidateService->getByPosition('Chairperson'),
+            'Vicechair'        => $this->candidateService->getByPosition('Vice-Chair'),
+            'Secretary'        => $this->candidateService->getByPosition('Secretary'),
+            'Sports and welfare' => $this->candidateService->getByPosition('Sports and Welfare'),
+            'Academic'         => $this->candidateService->getByPosition('Academic'),
+        ];
+
+        return view('admin-view.home-page', compact('data', 'totalCandidates', 'totalVoters', 'totalUsers'));
     }
 
     /**

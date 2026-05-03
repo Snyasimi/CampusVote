@@ -2,64 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\applications;
+use App\Models\Candidate;
 use Illuminate\Http\Request;
 
 class ApplicationsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of pending candidate applications.
      */
     public function index()
     {
-        //
+        $applications = Candidate::with('user')
+            ->where('candidate_status', 'review')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('admin-view.view-applications', compact('applications'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Approve or reject a candidate application.
      */
-    public function create()
+    public function update(Request $request, Candidate $application)
     {
-        //
-    }
+        $request->validate([
+            'action' => ['required', 'in:approved,flagged,disqualified'],
+        ]);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $application->update(['candidate_status' => $request->action]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(applications $applications)
-    {
-        //
-    }
+        $message = match($request->action) {
+            'approved'     => 'Candidate approved successfully.',
+            'flagged'      => 'Candidate flagged for review.',
+            'disqualified' => 'Candidate disqualified.',
+        };
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(applications $applications)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, applications $applications)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(applications $applications)
-    {
-        //
+        return back()->with('success', $message);
     }
 }
