@@ -56,6 +56,14 @@
                 </div>
             
                 <div>
+                    <label for="school">School / Faculty:</label>
+                    <input type="text" id="school" name="school" value="{{ old('school') }}" required>
+                    @if($errors->has('school'))
+                        <div class="error">{{ $errors->first('school') }}</div>
+                    @endif
+                </div>
+
+                <div>
                     <label for="role_number">Registration Number:</label>
                     <input type="text" id="role_number" name="role_number" value="{{ old('role_number') }}" required>
                     @if($errors->has('role_number'))

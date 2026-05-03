@@ -23,11 +23,11 @@ class VotingRequest extends FormRequest
     {
         return [
 	
-		'chairperson' => ['required'],
-		'vicechairperson' => ['required'],
-		'secretaryGeneral' => ['required'],
-		'sportsAndWelfare' -> ['required'],
-		'academicSecretary' => ['required']
+		'chairperson'      => ['required'],
+		'vice-chair'       => ['required'],
+		'secretary'        => ['required'],
+		'sports-and-welfare' => ['required'],
+		'academic'         => ['required'],
         ];
     }
 }

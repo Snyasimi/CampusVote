@@ -43,7 +43,7 @@ class SecurityController extends Controller
 			));
 		}
 
-		return back()->withErrors(['email' => 'Credentials do not match our records'])->onlyInput('email'); 
+		return back()->withErrors(['email' => 'Invalid credentials or your account is not active.'])->onlyInput('email'); 
 
 	}
 	public function registerUser(SignUpRequest $request)

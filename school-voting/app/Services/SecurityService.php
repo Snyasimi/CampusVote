@@ -25,6 +25,13 @@ class SecurityService{
 
 		if(Auth::attempt($credentials))
 		{
+			$user = Auth::user();
+
+			if ($user->account_status !== 'active') {
+				Auth::logout();
+				return false;
+			}
+
 			return true;
 		}
 

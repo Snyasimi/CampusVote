@@ -11,7 +11,7 @@
     <header>
         <h1>Mku e-polling</h1>
         <!-- Add navigation or logo here -->
-        <a href="login">Sign up</a>
+        <a href="{{ route('signUpPage') }}">Sign up</a>
     </header>
 
     <main>
@@ -41,7 +41,7 @@
                     <button type="submit">Login</button>
                 </div>
             
-                <p>Click Here to Sign up</p>
+                <p><a href="{{ route('signUpPage') }}">Click Here to Sign up</a></p>
             </form>
 
             

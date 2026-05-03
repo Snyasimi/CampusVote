@@ -100,6 +100,10 @@
                
             </fieldset>
 
+            <div>
+                <button type="submit">Cast Vote</button>
+            </div>
+
         </form>
         
         

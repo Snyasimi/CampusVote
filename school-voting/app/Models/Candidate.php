@@ -16,12 +16,19 @@ class Candidate extends Model
 		'profile_image_path',
 		'background_image_path',
 		'slogan',
-		'party'
+		'party',
+		'candidate_status',
+		'votes',
 	];
 
 
 	public function user(){
 
 		return $this->belongsTo(User::class);
+	}
+
+	public function votes()
+	{
+		return $this->hasMany(Votes::class);
 	}
 }

@@ -8,58 +8,36 @@ use Illuminate\Http\Request;
 class PositionsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all positions.
      */
     public function index()
     {
-        //
+        $positions = positions::orderBy('name')->get();
+
+        return view('admin-view.positions', compact('positions'));
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Store a new position.
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string', 'max:100', 'unique:positions,name'],
+        ]);
+
+        positions::create(['name' => $request->name]);
+
+        return back()->with('success', 'Position added successfully.');
     }
 
     /**
-     * Display the specified resource.
+     * Remove a position.
      */
-    public function show(positions $positions)
+    public function destroy(positions $position)
     {
-        //
-    }
+        $position->delete();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(positions $positions)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, positions $positions)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(positions $positions)
-    {
-        //
+        return back()->with('success', 'Position removed.');
     }
 }

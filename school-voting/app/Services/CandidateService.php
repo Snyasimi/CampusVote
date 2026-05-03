@@ -20,7 +20,10 @@ class CandidateService
 
 	protected function getAcceptedCandidatesByPosition($position)
 	{
-		$candidates =  Candidate::with('user')->where('position',$position)->get();
+		$candidates = Candidate::with('user')
+			->where('position', $position)
+			->where('candidate_status', 'approved')
+			->get();
 	
 		return $candidates;
 
@@ -69,7 +72,7 @@ class CandidateService
 
 		$candidateDetails['user_id'] = $user->id;
 		$candidateDetails['profile_image_path'] = $candidateProfilePicture;
-		$candidate['background_image_path'] = $candidateBackgroundPicture;	
+		$candidateDetails['background_image_path'] = $candidateBackgroundPicture;	
 		$candidate = Candidate::create($candidateDetails);
 
 
