@@ -1,0 +1,554 @@
+@import url('./colors.css');
+
+/* =========================================================
+   ADMIN LAYOUT
+   Material 3
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+   *,
+   *::before,
+   *::after {
+	   box-sizing: border-box;
+   }
+   
+   html {
+	   margin: 0;
+	   padding: 0;
+   
+	   font-size: 16px;
+   
+	   scroll-behavior: smooth;
+   }
+   
+   body {
+	   margin: 0;
+	   padding: 0;
+   
+	   min-height: 100vh;
+   
+	   background-color: var(--md-background);
+	   color: var(--md-on-background);
+   
+	   font-family:
+		   Inter,
+		   Roboto,
+		   "Segoe UI",
+		   system-ui,
+		   -apple-system,
+		   BlinkMacSystemFont,
+		   sans-serif;
+   
+	   font-size: 0.95rem;
+	   line-height: 1.5;
+   
+	   -webkit-font-smoothing: antialiased;
+   }
+   
+   
+   /* =========================================================
+	  LINKS
+	  ========================================================= */
+   
+   a {
+	   color: inherit;
+	   text-decoration: none;
+   }
+   
+   
+   /* =========================================================
+	  BUTTON RESET
+	  ========================================================= */
+   
+   button,
+   input,
+   select,
+   textarea {
+	   font: inherit;
+   }
+   
+   
+   /* =========================================================
+	  ADMIN CONTENT CONTAINER
+	  ========================================================= */
+   
+   .content-container {
+	   width: 100%;
+	   min-height: 100vh;
+   
+	   padding: 1rem;
+   }
+   
+   
+   /* =========================================================
+	  MAIN AREA
+	  ========================================================= */
+   
+   .main-area {
+	   width: 100%;
+	   max-width: 1400px;
+   
+	   margin: 0 auto;
+   
+	   padding: 1rem 0 2rem;
+   }
+   
+   
+   /* =========================================================
+	  PAGE HEADER
+	  ========================================================= */
+   
+   .page-header {
+	   display: flex;
+	   flex-direction: column;
+   
+	   gap: 0.75rem;
+   
+	   margin-bottom: 1.5rem;
+   }
+   
+   .page-header-content {
+	   display: flex;
+	   flex-direction: column;
+   
+	   gap: 0.25rem;
+   }
+   
+   .page-title {
+	   margin: 0;
+   
+	   color: var(--md-on-background);
+   
+	   font-size: 1.75rem;
+	   line-height: 1.2;
+	   font-weight: 600;
+   
+	   letter-spacing: -0.02em;
+   }
+   
+   .page-subtitle {
+	   margin: 0;
+   
+	   color: var(--md-on-surface-variant);
+   
+	   font-size: 0.95rem;
+   }
+   
+   
+   /* =========================================================
+	  SECTION
+	  ========================================================= */
+   
+   .section {
+	   margin-bottom: 1.5rem;
+   }
+   
+   .section-header {
+	   display: flex;
+	   align-items: center;
+	   justify-content: space-between;
+   
+	   gap: 1rem;
+   
+	   margin-bottom: 1rem;
+   }
+   
+   .section-title {
+	   margin: 0;
+   
+	   font-size: 1.25rem;
+	   font-weight: 600;
+   }
+   
+   
+   /* =========================================================
+	  CARD
+	  ========================================================= */
+   
+   .card {
+	   padding: 1rem;
+   
+	   background: var(--md-surface-container-low);
+   
+	   border-radius: 1rem;
+   }
+   
+   .card-outlined {
+	   background: var(--md-surface);
+   
+	   border: 1px solid var(--md-outline-variant);
+   }
+   
+   .card-elevated {
+	   background: var(--md-surface);
+   
+	   box-shadow:
+		   0 1px 2px rgba(0, 0, 0, 0.08),
+		   0 2px 6px rgba(0, 0, 0, 0.06);
+   }
+   
+   
+   /* =========================================================
+	  CARD HEADER
+	  ========================================================= */
+   
+   .card-header {
+	   display: flex;
+	   align-items: center;
+	   justify-content: space-between;
+   
+	   gap: 1rem;
+   
+	   margin-bottom: 1rem;
+   }
+   
+   .card-title {
+	   margin: 0;
+   
+	   font-size: 1.1rem;
+	   font-weight: 600;
+   }
+   
+   .card-description {
+	   margin: 0.25rem 0 0;
+   
+	   color: var(--md-on-surface-variant);
+   
+	   font-size: 0.875rem;
+   }
+   
+   
+   /* =========================================================
+	  CARD GRID
+	  ========================================================= */
+   
+   .card-grid {
+	   display: grid;
+   
+	   grid-template-columns: 1fr;
+   
+	   gap: 1rem;
+   }
+   
+   
+   /* =========================================================
+	  BUTTONS
+	  ========================================================= */
+   
+   .btn {
+	   display: inline-flex;
+	   align-items: center;
+	   justify-content: center;
+   
+	   gap: 0.5rem;
+   
+	   min-height: 40px;
+   
+	   padding: 0.625rem 1.25rem;
+   
+	   border: none;
+	   border-radius: 999px;
+   
+	   cursor: pointer;
+   
+	   font-size: 0.875rem;
+	   font-weight: 500;
+   
+	   transition:
+		   box-shadow 150ms ease,
+		   background-color 150ms ease,
+		   transform 100ms ease;
+   }
+   
+   .btn:active {
+	   transform: scale(0.98);
+   }
+   
+   
+   /* Filled */
+   
+   .btn-primary {
+	   background: var(--md-primary);
+	   color: var(--md-on-primary);
+   }
+   
+   .btn-primary:hover {
+	   box-shadow:
+		   0 2px 4px rgba(0, 0, 0, 0.15);
+   }
+   
+   
+   /* Tonal */
+   
+   .btn-tonal {
+	   background: var(--md-primary-container);
+	   color: var(--md-on-primary-container);
+   }
+   
+   
+   /* Outlined */
+   
+   .btn-outlined {
+	   background: transparent;
+   
+	   color: var(--md-primary);
+   
+	   border: 1px solid var(--md-outline);
+   }
+   
+   
+   /* Text */
+   
+   .btn-text {
+	   background: transparent;
+   
+	   color: var(--md-primary);
+   
+	   padding-inline: 0.75rem;
+   }
+   
+   
+   /* Danger */
+   
+   .btn-danger {
+	   background: var(--md-error);
+	   color: var(--md-on-error);
+   }
+   
+   
+   /* =========================================================
+	  ACTION GROUP
+	  ========================================================= */
+   
+   .action-group {
+	   display: flex;
+	   flex-wrap: wrap;
+   
+	   gap: 0.5rem;
+   }
+   
+   
+   /* =========================================================
+	  FORM
+	  ========================================================= */
+   
+   .form-group {
+	   display: flex;
+	   flex-direction: column;
+   
+	   gap: 0.4rem;
+   }
+   
+   .form-label {
+	   color: var(--md-on-background);
+   
+	   font-size: 0.875rem;
+	   font-weight: 500;
+   }
+   
+   .form-control {
+	   width: 100%;
+	   min-height: 52px;
+   
+	   padding: 0.75rem 1rem;
+   
+	   background: var(--md-surface);
+   
+	   color: var(--md-on-surface);
+   
+	   border: 1px solid var(--md-outline);
+	   border-radius: 4px;
+   
+	   outline: none;
+   
+	   transition:
+		   border-color 150ms ease,
+		   box-shadow 150ms ease;
+   }
+   
+   .form-control:focus {
+	   border-color: var(--md-primary);
+   
+	   box-shadow:
+		   0 0 0 1px var(--md-primary);
+   }
+   
+   .form-control::placeholder {
+	   color: var(--md-on-surface-variant);
+   }
+   
+   textarea.form-control {
+	   min-height: 120px;
+   
+	   resize: vertical;
+   }
+   
+   
+   /* =========================================================
+	  SEARCH
+	  ========================================================= */
+   
+   .search-container {
+	   position: relative;
+   
+	   width: 100%;
+   }
+   
+   .search-container .form-control {
+	   padding-left: 3rem;
+   }
+   
+   .search-icon {
+	   position: absolute;
+   
+	   left: 1rem;
+	   top: 50%;
+   
+	   transform: translateY(-50%);
+   
+	   color: var(--md-on-surface-variant);
+   
+	   pointer-events: none;
+   }
+   
+   
+   /* =========================================================
+	  STATUS CHIPS
+	  ========================================================= */
+   
+   .chip {
+	   display: inline-flex;
+	   align-items: center;
+   
+	   min-height: 32px;
+   
+	   padding: 0.25rem 0.75rem;
+   
+	   border-radius: 999px;
+   
+	   font-size: 0.8rem;
+	   font-weight: 500;
+   }
+   
+   .chip-primary {
+	   background: var(--md-primary-container);
+	   color: var(--md-on-primary-container);
+   }
+   
+   .chip-success {
+	   background: var(--md-success-container);
+	   color: var(--md-on-success-container);
+   }
+   
+   .chip-warning {
+	   background: var(--md-warning-container);
+	   color: var(--md-on-warning-container);
+   }
+   
+   .chip-error {
+	   background: var(--md-error-container);
+	   color: var(--md-on-error-container);
+   }
+   
+   .chip-neutral {
+	   background: var(--md-surface-container-high);
+	   color: var(--md-on-surface);
+   }
+   
+   
+   /* =========================================================
+	  NOTIFICATIONS
+	  ========================================================= */
+   
+   .notification {
+	   width: 100%;
+   
+	   margin-bottom: 1rem;
+	   padding: 0.875rem 1rem;
+   
+	   border-radius: 0.75rem;
+   
+	   font-size: 0.9rem;
+   }
+   
+   .notification-success {
+	   background: var(--md-success-container);
+	   color: var(--md-on-success-container);
+   }
+   
+   .notification-info {
+	   background: var(--md-primary-container);
+	   color: var(--md-on-primary-container);
+   }
+   
+   .notification-warning {
+	   background: var(--md-warning-container);
+	   color: var(--md-on-warning-container);
+   }
+   
+   .notification-error {
+	   background: var(--md-error-container);
+	   color: var(--md-on-error-container);
+   }
+   
+   
+   /* =========================================================
+	  DIVIDER
+	  ========================================================= */
+   
+   .divider {
+	   width: 100%;
+	   height: 1px;
+   
+	   margin: 1rem 0;
+   
+	   background: var(--md-outline-variant);
+   
+	   border: none;
+   }
+   
+   
+   /* =========================================================
+	  RESPONSIVE
+	  ========================================================= */
+   
+   @media (min-width: 600px) {
+   
+	   .content-container {
+		   padding: 1.5rem;
+	   }
+   
+	   .main-area {
+		   padding-top: 1.5rem;
+	   }
+   
+	   .page-header {
+		   flex-direction: row;
+		   align-items: center;
+		   justify-content: space-between;
+	   }
+   
+	   .card-grid {
+		   grid-template-columns: repeat(2, 1fr);
+	   }
+   }
+   
+   
+   @media (min-width: 900px) {
+   
+	   .content-container {
+		   padding: 2rem;
+	   }
+   
+	   .main-area {
+		   padding-top: 2rem;
+	   }
+   
+	   .card-grid {
+		   grid-template-columns: repeat(3, 1fr);
+	   }
+   }

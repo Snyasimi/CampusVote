@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ asset('css/auth-pages/login-page.css')}}"> 
+</head>
+<body>
+    <header>
+        <h1>Mku e-polling</h1>
+        <!-- Add navigation or logo here -->
+        <a href="{{ route('signUpPage') }}">Sign up</a>
+    </header>
+
+    <main>
+        <div class="login-form">
+            
+            <form action="{{ route('authenticateUser') }}" method="post">
+                @csrf
+                <h2>Please Log In</h2>
+            
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    @if ($errors->has('email'))
+                        <span style="color: red;">{{ $errors->first('email') }}</span>
+                    @endif
+                </div>
+            
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    @if ($errors->has('password'))
+                        <span style="color: red;">{{ $errors->first('password') }}</span>
+                    @endif
+                </div>
+            
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+            
+                <p><a href="{{ route('signUpPage') }}">Click Here to Sign up</a></p>
+            </form>
+
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Mount Kenya University</p>
+    </footer>
+</body>
+</html>

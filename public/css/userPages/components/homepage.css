@@ -1,0 +1,105 @@
+/* General styling for the body */
+@import url('../layout.css');
+.main-area{
+
+}
+
+
+/* Subtitle Style */
+
+
+/* Table Container Styling */
+.table-container {
+    display: grid;
+    background-color: #f8f8f8;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Responsive grid layout */
+    gap: 1rem; /* Space between tables */
+}
+
+/* Position Card Styling */
+.position {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #eee; /* Light grey border for separation */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect animations */
+}
+
+/* Hover Effect for Position Cards */
+.position:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Darker shadow on hover */
+}
+
+/* Results Table (x-user.results-table) Styling */
+table {
+    min-width:100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc; /* Light grey border for the entire table */
+    background-color: #ffffff; /* White background for simplicity */
+    text-align: center;
+}
+
+thead th {
+    background-color: #f3f3f3; /* Neutral light grey for headers */
+    color: #333; /* Dark grey for header text */
+    text-align: left;
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 2px solid #e0e0e0; /* Slightly darker border to separate headers */
+}
+
+tbody tr {
+    border-bottom: 1px solid #e6e6e6; /* Row separator */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fafafa; /* Light grey for odd rows (zebra stripe effect) */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White background for even rows */
+}
+
+td {
+    padding: 1rem;
+    color: #333; /* Neutral grey for body text */
+    border: 1px solid #ccc;
+}
+
+/* Table Row Hover Effect */
+tbody tr:hover {
+    background-color: #f7f7f7; /* Lighter grey for hover effect */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-area {
+        padding: 10px;
+    }
+
+    header h2 {
+        font-size: 24px; /* Adjusted header size for smaller screens */
+    }
+
+    .table-container {
+        gap: 10px; /* Reduce gap between tables on small screens */
+    }
+
+    table {
+        font-size: 12px; /* Reduce table font size for smaller screens */
+    }
+
+    thead th,
+    tbody td {
+        padding: 8px; /* Adjust padding inside cells */
+    }
+}

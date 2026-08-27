@@ -1,0 +1,134 @@
+/* General Styling for the Side Navigation */
+.side-nav {
+    width: 250px; /* Default width on larger screens */
+    min-height: 100vh; /* Full height navigation */
+    background-color: #f8f8f8; /* Light grey background */
+    border-right: 1px solid #e6e6e6; /* Add a subtle border to the right side */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    padding: 20px;
+}
+
+.side-nav h2 {
+    text-align: center;
+    color: #333; /* Neutral dark grey for the header */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styling for the Student Details Section */
+.student-details {
+    .side-nav {dow */
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.student-details h3 {
+    text-align: center;
+    font-size: 18px;
+    color: #555; /* Slightly lighter grey for subsection titles */
+    margin-bottom: 12px;
+}
+
+.student-name,
+.student-status {
+    display: flex;
+    justify-content: space-between; /* Align name/status on the left and its value on the right */
+}
+
+.student-name p,
+.student-status p {
+    margin: 4px 0; /* Slight margin between paragraphs */
+    font-size: 14px;
+}
+
+/* Link Styling (List Items) */
+.side-nav ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    margin-bottom: 15px;
+}
+
+.side-nav ul li a {
+    display: block; /* Make links block elements for full clickable area */
+    background-color: #ffffff; /* White background for links */
+    padding: 12px;
+    border: 1px solid #e6e6e6; /* Subtle border */
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none; /* Remove underlines */
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.side-nav ul li a:hover {
+    background-color: #f3f3f3; /* Light grey background on hover */
+    color: #000; /* Darken the text on hover */
+}
+
+/* Logout Button Styling */
+.side-nav ul li form button {
+    width: 100%; /* Full-width button for consistency */
+    padding: 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.side-nav ul li form button:hover {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .side-nav {
+        width: 100%; /* Make the side-nav full-width on small screens */
+        min-height: auto; /* Let the height adjust based on content */
+        border-right: none; /* Remove the right border */
+        box-shadow: none; /* Remove box shadow */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .side-nav h2 {
+        font-size: 18px; /* Adjust header font size for smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .student-details,
+    .student-details h3 {
+        font-size: 14px; /* Adjust subsection font size */
+    }
+
+    .student-name,
+    .student-status {
+        flex-direction: column; /* Stack details vertically on mobile */
+    }
+
+    .student-name p,
+    .student-status p {
+        text-align: left; /* Left-align text */
+        font-size: 13px; /* Adjust font size for mobile */
+    }
+
+    .side-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .side-nav ul li a,
+    .side-nav ul li form button {
+        padding: 10px;
+        font-size: 12px; /* Reduce size for smaller screens */
+    }
+}

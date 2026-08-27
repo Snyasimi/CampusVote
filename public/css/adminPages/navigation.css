@@ -1,0 +1,259 @@
+/* =========================================================
+   ADMIN NAVIGATION
+   Material 3
+   BEM
+   ========================================================= */
+@import url('./colors.css');
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+   .admin-navigation {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 1rem;
+
+    background: var(--md-surface-container-low);
+
+    color: var(--md-on-surface);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-navigation__header {
+    display: flex;
+    align-items: center;
+
+    min-height: 56px;
+
+    margin-bottom: 1rem;
+}
+
+.admin-navigation__title {
+    margin: 0;
+
+    color: var(--md-on-surface);
+
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.admin-navigation__profile {
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+
+    background: var(--md-surface-container);
+
+    border-radius: var(--radius-lg);
+}
+
+.admin-navigation__section-title {
+    margin: 0 0 1rem;
+
+    color: var(--md-on-surface);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFILE DETAILS
+   ========================================================= */
+
+.admin-navigation__profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-navigation__profile-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.125rem;
+
+    padding: 0.75rem 0;
+
+    border-bottom: 1px solid var(--md-outline-variant);
+}
+
+.admin-navigation__profile-item:first-child {
+    padding-top: 0;
+}
+
+.admin-navigation__profile-item:last-child {
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   PROFILE TEXT
+   ========================================================= */
+
+.admin-navigation__profile-label {
+    color: var(--md-on-surface-variant);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.admin-navigation__profile-value {
+    color: var(--md-on-surface);
+
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.admin-navigation__menu {
+    width: 100%;
+}
+
+.admin-navigation__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   NAVIGATION GROUP
+   ========================================================= */
+
+.admin-navigation__group {
+    width: 100%;
+
+    padding: 0.75rem;
+
+    border-radius: var(--radius-lg);
+}
+
+.admin-navigation__group-title {
+    margin: 0 0 0.5rem;
+
+    color: var(--md-on-surface);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SUBMENU
+   ========================================================= */
+
+.admin-navigation__submenu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   NAVIGATION ITEM
+   ========================================================= */
+
+.admin-navigation__item {
+    width: 100%;
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+   ========================================================= */
+
+.admin-navigation__link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    padding: 0.625rem 1rem;
+
+    border-radius: 999px;
+
+    color: var(--md-on-surface-variant);
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background-color 150ms ease,
+        color 150ms ease;
+}
+
+.admin-navigation__link:hover {
+    background: var(--md-secondary-container);
+
+    color: var(--md-on-secondary-container);
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+   ========================================================= */
+
+.admin-navigation__link--active {
+    background: var(--md-primary-container);
+
+    color: var(--md-on-primary-container);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .admin-navigation {
+        flex: 0 0 280px;
+
+        width: 280px;
+
+        position: sticky;
+        top: 0;
+
+        height: 100vh;
+
+        overflow-y: auto;
+
+        padding: 1.25rem;
+
+        border-right: 1px solid var(--md-outline-variant);
+    }
+
+}

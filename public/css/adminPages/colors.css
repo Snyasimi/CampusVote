@@ -1,0 +1,106 @@
+:root {
+    /* =====================================================
+       MATERIAL 3 — PRIMARY
+       ===================================================== */
+
+    --md-primary: #6750A4;
+    --md-on-primary: #FFFFFF;
+
+    --md-primary-container: #EADDFF;
+    --md-on-primary-container: #21005D;
+
+
+    /* =====================================================
+       MATERIAL 3 — SECONDARY
+       ===================================================== */
+
+    --md-secondary: #625B71;
+    --md-on-secondary: #FFFFFF;
+
+    --md-secondary-container: #E8DEF8;
+    --md-on-secondary-container: #1D192B;
+
+
+    /* =====================================================
+       MATERIAL 3 — TERTIARY
+       ===================================================== */
+
+    --md-tertiary: #7D5260;
+    --md-on-tertiary: #FFFFFF;
+
+    --md-tertiary-container: #FFD8E4;
+    --md-on-tertiary-container: #31111D;
+
+
+    /* =====================================================
+       MATERIAL 3 — ERROR
+       ===================================================== */
+
+    --md-error: #BA1A1A;
+    --md-on-error: #FFFFFF;
+
+    --md-error-container: #FFDAD6;
+    --md-on-error-container: #410002;
+
+
+    /* =====================================================
+       MATERIAL 3 — SURFACE
+       ===================================================== */
+
+    --md-background: #FFFBFE;
+    --md-on-background: #1C1B1F;
+
+    --md-surface: #FFFBFE;
+    --md-on-surface: #1C1B1F;
+
+    --md-surface-variant: #E7E0EC;
+    --md-on-surface-variant: #49454F;
+
+
+    /* =====================================================
+       MATERIAL 3 — SURFACE CONTAINERS
+       ===================================================== */
+
+    --md-surface-container-lowest: #FFFFFF;
+    --md-surface-container-low: #F7F2FA;
+    --md-surface-container: #F3EDF7;
+    --md-surface-container-high: #ECE6F0;
+    --md-surface-container-highest: #E6E0E9;
+
+
+    /* =====================================================
+       MATERIAL 3 — OUTLINE
+       ===================================================== */
+
+    --md-outline: #79747E;
+    --md-outline-variant: #CAC4D0;
+
+
+    /* =====================================================
+       SEMANTIC COLORS
+       ===================================================== */
+
+    --md-success: #386A20;
+    --md-success-container: #B9F397;
+    --md-on-success-container: #0F2000;
+
+    --md-warning: #7D5700;
+    --md-warning-container: #FFDEA6;
+    --md-on-warning-container: #261900;
+
+
+    /* =====================================================
+       INVERSE COLORS
+       ===================================================== */
+
+    --md-inverse-surface: #313033;
+    --md-inverse-on-surface: #F4EFF4;
+    --md-inverse-primary: #D0BCFF;
+
+
+    /* =====================================================
+       SCRIM / OVERLAY
+       ===================================================== */
+
+    --md-scrim: rgba(0, 0, 0, 0.32);
+}

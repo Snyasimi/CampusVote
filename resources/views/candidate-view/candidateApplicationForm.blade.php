@@ -1,0 +1,1 @@
+<x-candidate.application-form />

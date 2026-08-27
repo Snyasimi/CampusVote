@@ -1,0 +1,265 @@
+
+@import url('./colors.css');
+/* =========================================================
+   ADMIN HOME PAGE
+   BEM naming convention
+   Material 3
+   ========================================================= */
+
+
+
+   /* =========================================================
+   ADMIN APPLICATION LAYOUT
+   ========================================================= */
+
+.admin-layout {
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: var(--md-background);
+}
+
+
+/* =========================================================
+   ADMIN CONTENT
+   ========================================================= */
+
+.admin-layout__content {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    padding: 1rem;
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+   .admin-home {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 1rem 0 2rem;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-home__header {
+    display: flex;
+    align-items: center;
+
+    min-height: 64px;
+
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+
+    background: var(--md-surface);
+
+    border: 1px solid var(--md-outline-variant);
+    border-radius: var(--radius-lg);
+
+    color: var(--md-on-surface);
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    box-shadow: var(--elevation-1);
+}
+
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
+.admin-home__banner {
+    display: flex;
+    align-items: center;
+
+    min-height: 160px;
+
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+
+    background: var(--md-primary-container);
+
+    border-radius: var(--radius-xl);
+
+    color: var(--md-on-primary-container);
+}
+
+.admin-home__banner-title {
+    margin: 0;
+
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   QUICK STATISTICS
+   ========================================================= */
+
+.admin-home__stats {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 0.75rem;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.admin-home__stat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 120px;
+
+    padding: 1.25rem;
+
+    background: var(--md-surface-container);
+
+    border-radius: var(--radius-lg);
+
+    transition:
+        background-color 150ms ease,
+        box-shadow 150ms ease,
+        transform 150ms ease;
+}
+
+.admin-home__stat-card:hover {
+    background: var(--md-surface-container-high);
+
+    box-shadow: var(--elevation-1);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   STAT TITLE
+   ========================================================= */
+
+.admin-home__stat-title {
+    margin: 0;
+
+    color: var(--md-on-surface-variant);
+
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   STAT VALUE
+   ========================================================= */
+
+.admin-home__stat-value {
+    display: block;
+
+    margin-top: 0.35rem;
+
+    color: var(--md-primary);
+
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.admin-home__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 64px;
+
+    margin-top: 2rem;
+    padding: 1rem;
+
+    border-top: 1px solid var(--md-outline-variant);
+
+    color: var(--md-on-surface-variant);
+
+    font-size: 0.8rem;
+}
+
+.admin-home__footer-text {
+    margin: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .admin-home {
+        padding-top: 1.5rem;
+    }
+
+    .admin-home__header {
+        padding-inline: 1.25rem;
+    }
+
+    .admin-home__banner {
+        min-height: 180px;
+
+        padding: 2rem;
+    }
+
+    .admin-home__stats {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 1rem;
+    }
+
+    .admin-home__stat-card {
+        min-height: 140px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .admin-home {
+        padding-top: 2rem;
+    }
+
+    .admin-home__stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admin-home__stat-card {
+        min-height: 150px;
+
+        padding: 1.5rem;
+    }
+}
